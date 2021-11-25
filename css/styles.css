@@ -7,10 +7,11 @@
   --background-title-color: #2f303a;
   --our-team-color: #f5f4fa;
   --hero-btn-accent-color: #0775ce;
+  --our-team-social-network-icon: #afb1b8;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: var(--text-color);
   background-color: var(--second-title-color);
   letter-spacing: 0.02em;
@@ -29,6 +30,7 @@ body {
   width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
+  display: block;
 }
 
 .section {
@@ -61,7 +63,7 @@ ul {
 /*________LOGO________*/
 
 .logo {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 31px;
@@ -143,6 +145,25 @@ ul {
   margin-left: 50px;
 }
 
+.mail-icon {
+  width: 16px;
+  height: 12px;
+  fill: currentColor;
+  margin-right: 10px;
+}
+.tel-icon {
+  width: 16px;
+  height: 12px;
+  fill: currentColor;
+  margin-right: 10px;
+}
+.mail-icon:hover,
+.mail-icon:focus,
+.tel-icon:hover,
+.tel-icon:focus {
+  fill: currentColor;
+}
+
 .current-button-nav {
   font-family: inherit;
   font-weight: 500;
@@ -162,7 +183,16 @@ ul {
 
 .hero {
   background-color: var(--background-title-color);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/backgraund-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   text-align: center;
+  max-width: 1600px;
 }
 
 .hero-title {
@@ -214,6 +244,25 @@ ul {
   text-align: center;
   padding-top: 94px;
   padding-bottom: 94px;
+}
+
+.about-us-icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70px;
+  height: 70px;
+}
+
+.about-us-icon-background {
+  margin-bottom: 30px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  display: flex;
+  width: 100%;
+  min-height: 120px;
+  align-items: center;
+  border-radius: 4px;
 }
 
 .about-us-list {
@@ -313,6 +362,9 @@ ul {
 
 .our-team-mate {
   background-color: var(--second-title-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .our-team-list .our-team-mate + .our-team-mate {
@@ -340,16 +392,135 @@ ul {
 }
 .our-team-mate-position {
   font-size: 16px;
-  line-height: 19px;
+  line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--text-color);
 }
+
+.our-team-social-networks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+}
+
+/* .social-network-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.our-team-social-networks
+  .our-team-social-network-item
+  + .our-team-social-network-item {
+  margin-left: 10px;
+}
+
+/* .our-team-social-network-icon {
+  fill: currentColor;
+} */
+
+.our-team-social-network {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  fill: var(--our-team-social-network-icon);
+}
+
+.our-team-social-network:hover,
+.our-team-social-network:focus {
+  fill: var(--second-title-color);
+  background-color: var(--accent-color);
+}
+
+/*________OUR CLIENTS________*/
+
+.our-clients {
+}
+
+.our-clients-title {
+  margin: 0 0 50px 0;
+  padding: 0;
+
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--main-title-color);
+}
+
+.our-clients-list {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.our-client {
+  margin: 0;
+  padding: 0;
+}
+
+.our-clients-list .our-client + .our-client {
+  margin-left: 30px;
+}
+
+.our-client-link {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  height: 92px;
+
+  color: var(--our-team-social-network-icon);
+  border: 1px solid var(--our-team-social-network-icon);
+  border-radius: 4px;
+}
+
+.our-client-link:focus,
+.our-client-link:hover {
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
+
+.our-client-icon {
+  margin: 0;
+  padding: 0;
+  width: 106px;
+  height: 60px;
+
+  fill: currentColor;
+}
+
 /*________FOOTER_________*/
 .footer {
   background-color: var(--background-title-color);
   padding: 60px 0;
 }
+
+.footer > .container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-contact-section {
+  display: block;
+}
+
 .footer-logo {
   padding: 0;
 }
@@ -383,9 +554,58 @@ ul {
 }
 
 .footer-contacts-list {
-  display: block;
+  /* display: block; */
   padding: 0;
   margin-top: 0;
+}
+.social-networks-footer {
+  display: block;
+  margin-left: 70px;
+}
+
+.social-networks-footer p {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--second-title-color);
+
+  margin-bottom: 20px;
+}
+
+.social-networks-footer-list {
+  display: flex;
+  justify-content: center;
+}
+
+.social-networks-footer-list .social-network-footer + .social-network-footer {
+  margin-left: 10px;
+}
+
+.social-networks-footer-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  color: var(--second-title-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-networks-footer-link:hover,
+.social-networks-footer-link:focus {
+  background-color: var(--accent-color);
+}
+
+.social-networks-footer-icon {
+  width: 20px;
+  height: 20px;
+
+  fill: currentColor;
 }
 
 /*========PORTFOLIO========*/
@@ -434,6 +654,8 @@ ul {
 .filter-btn:hover {
   background-color: var(--accent-color);
   color: var(--second-title-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .current-button:focus,
 .current-button:hover {
@@ -455,6 +677,13 @@ ul {
   flex-basis: calc((100% - 90px) / 3);
 
   border: 1px solid #eeeeee;
+}
+
+.project:focus,
+.project:hover {
+  box-sizing: border-box;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .projects-text {
