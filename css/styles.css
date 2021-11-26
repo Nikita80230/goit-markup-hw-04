@@ -152,8 +152,8 @@ ul {
   margin-right: 10px;
 }
 .tel-icon {
-  width: 16px;
-  height: 12px;
+  width: 10px;
+  height: 16px;
   fill: currentColor;
   margin-right: 10px;
 }
@@ -193,6 +193,10 @@ ul {
   background-size: cover;
   text-align: center;
   max-width: 1600px;
+
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin: 0 auto;
 }
 
 .hero-title {
@@ -236,7 +240,6 @@ ul {
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
-  border: 1px solid transparent;
 }
 
 /*________ABOUT US________*/
@@ -247,9 +250,6 @@ ul {
 }
 
 .about-us-icon {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
   width: 70px;
   height: 70px;
 }
@@ -262,6 +262,7 @@ ul {
   width: 100%;
   min-height: 120px;
   align-items: center;
+  justify-content: center;
   border-radius: 4px;
 }
 
@@ -372,7 +373,7 @@ ul {
 }
 
 .our-team-text {
-  padding: 30px 0;
+  padding: 30px;
 }
 
 .our-team-mate-photo {
@@ -396,13 +397,14 @@ ul {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--text-color);
+
+  margin-bottom: 16px;
 }
 
 .our-team-social-networks {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 16px;
 }
 
 /* .social-network-item {
@@ -675,10 +677,9 @@ ul {
   margin-left: 30px;
   text-align: start;
   flex-basis: calc((100% - 90px) / 3);
-
-  border: 1px solid #eeeeee;
 }
-
+.project-link:focus,
+.project-link:hover,
 .project:focus,
 .project:hover {
   box-sizing: border-box;
@@ -688,6 +689,7 @@ ul {
 
 .projects-text {
   padding: 20px 24px;
+  border: 1px solid #eeeeee;
 }
 
 .project-photo {
